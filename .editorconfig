@@ -1,0 +1,13 @@
+# create a configuration for .editorconfig
+cat > .editorconfig << EOF
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+spaces_around_operators = true
+spaces_around_brackets = true
+ident_use_tabs = false
+indent_size = 2
+[*]
+
+        
