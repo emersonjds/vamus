@@ -5,7 +5,7 @@ import { Divider, Title } from 'react-native-paper';
 import { useTheme } from 'styled-components';
 import Colors from '../../components/Constants';
 import { Box } from '../../components/Spacing';
-import { AntDesign, Entypo, FontAwesome } from '@expo/vector-icons';
+import { AntDesign, Entypo } from '@expo/vector-icons';
 
 
 // import { Container } from './styles';
@@ -27,7 +27,6 @@ const HomeScreen: FC = () => {
                         style={{
                             fontWeight: 'bold',
                         }}
-
                     >
                         Bem vindo, Emerson
                     </Title>
