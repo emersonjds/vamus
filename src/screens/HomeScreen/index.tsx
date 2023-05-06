@@ -85,7 +85,6 @@ const HomeScreen: FC = () => {
                         }}
                         horizontal
                         showsHorizontalScrollIndicator={false}
-
                     >
 
                         <View
@@ -113,7 +112,6 @@ const HomeScreen: FC = () => {
                                     resizeMode='stretch'
 
                                 />
-
                                 <Box
                                     position="absolute"
                                     top={-90}
@@ -123,8 +121,6 @@ const HomeScreen: FC = () => {
                                 >
                                     <AntDesign name="hearto" size={24} color="white" />
                                 </Box>
-
-
                             </Box>
                             <Box
                                 mt={10}
