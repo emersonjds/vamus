@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Divider } from 'react-native-paper';
+
 
 // import { Container } from './styles';
 
@@ -19,13 +21,23 @@ const HomeScreen: FC = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <Text
+                    <TouchableOpacity
                         style={{
-                            alignItems: 'center',
-                            justifyContent: 'center',
+                            borderRadius: 10,
+                            borderWidth: 2,
+                            borderColor: '#000',
+                            padding: 20
                         }}
                     >
-                    </Text>
+                        <Text
+                            style={{
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            Iai Vamos pra onde !?
+                        </Text>
+                    </TouchableOpacity>
                 </View>
             </SafeAreaView>
         </>
