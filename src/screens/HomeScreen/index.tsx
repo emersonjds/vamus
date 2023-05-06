@@ -1,9 +1,6 @@
-import React, { FC, useCallback, useEffect } from 'react';
+import React, { FC } from 'react';
 import { Box } from '../../components/Spacing';
 import CardTrip from '../../components/CardTrip';
-
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
 
 const HomeScreen: FC = () => {
 
