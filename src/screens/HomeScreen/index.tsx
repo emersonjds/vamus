@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Divider, Title } from 'react-native-paper';
 import { useTheme } from 'styled-components';
 import Colors from '../../components/Constants';
 import { Box } from '../../components/Spacing';
-import { AntDesign, FontAwesome } from '@expo/vector-icons';
+import { AntDesign, Entypo, FontAwesome } from '@expo/vector-icons';
 
 
 // import { Container } from './styles';
@@ -20,6 +20,21 @@ const HomeScreen: FC = () => {
                     flex: 1,
                 }}
             >
+                <Box
+                    ml={10}
+                >
+                    <Title
+                        style={{
+                            fontWeight: 'bold',
+                        }}
+
+                    >
+                        Bem vindo, Emerson
+                    </Title>
+                </Box>
+
+
+                <Divider />
 
 
                 <View
@@ -65,12 +80,81 @@ const HomeScreen: FC = () => {
                     <ScrollView
                         style={{
                             width: '100%',
-                            paddingHorizontal: 20,
                             marginHorizontal: 20,
                             paddingVertical: 20,
                         }}
                         horizontal
+                        showsHorizontalScrollIndicator={false}
+
                     >
+
+                        <View
+                            style={{
+                                height: 140,
+                                width: 200,
+                                borderWidth: 2,
+                                borderColor: `${Colors.light_gray}`,
+                                marginRight: 10,
+                                borderRadius: 10,
+                            }}>
+                            <Box
+                                height={'70%'}
+                                width={'100%'}
+
+                            >
+                                <Image
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        borderTopLeftRadius: 10,
+                                        borderTopRightRadius: 10,
+                                    }}
+                                    source={require('../../assets/sf.jpeg')}
+                                    resizeMode='stretch'
+
+                                />
+
+                                <Box
+                                    position="absolute"
+                                    top={-90}
+                                    left={160}
+                                    right={0}
+                                    bottom={0}
+                                >
+                                    <AntDesign name="hearto" size={24} color="white" />
+                                </Box>
+
+
+                            </Box>
+                            <Box
+                                mt={10}
+                                ml={10}
+                            >
+                                <Box
+                                    flexDirection="row"
+                                    justifyContent="space-between"
+                                    alignItems="center"
+                                >
+                                    <Text>
+                                        São Paulo
+                                    </Text>
+                                    <Box
+                                        flexDirection="row"
+                                        justifyContent="space-between"
+                                        width={50}
+                                        alignItems="center"
+                                    >
+                                        <Entypo name="eye" size={24} color="black" />
+                                        <Text>
+                                            98
+                                        </Text>
+
+                                    </Box>
+                                </Box>
+                            </Box>
+
+                        </View>
+
                         <View
                             style={{
                                 height: 140,
@@ -101,25 +185,33 @@ const HomeScreen: FC = () => {
 
                         <View
                             style={{
-                                height: 100,
-                                width: 120,
+                                height: 140,
+                                width: 150,
                                 borderWidth: 2,
                                 borderColor: `${Colors.light_gray}`,
                                 marginRight: 10,
                                 borderRadius: 10,
                             }}>
+                            <Box
+                                justifyContent="flex-end"
+                                alignItems="flex-end"
+                            >
+                                <Box
+                                    position="absolute"
+                                    top={15}
+                                    left={0}
+                                    right={0}
+                                    bottom={0}
+                                    height={35}
+                                    width={35}
+                                >
+                                    <AntDesign name="hearto" size={24} color="black" />
+                                </Box>
+                            </Box>
+
                         </View>
 
-                        <View
-                            style={{
-                                height: 100,
-                                width: 120,
-                                borderWidth: 2,
-                                borderColor: `${Colors.light_gray}`,
-                                marginRight: 10,
-                                borderRadius: 10,
-                            }}>
-                        </View>
+
 
                     </ScrollView>
                 </View>
