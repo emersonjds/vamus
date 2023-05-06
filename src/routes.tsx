@@ -1,8 +1,8 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "./components/screens/HomeScreen";
-import Trips from "./components/screens/Trips";
+import HomeScreen from "./screens/HomeScreen";
+import Trips from "./screens/Trips";
 import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
@@ -10,8 +10,8 @@ import { Entypo } from '@expo/vector-icons';
 
 import { AntDesign } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Profile from "./components/screens/Profile";
-import MyTravel from "./components/screens/MyTravel";
+import Profile from "./screens/Profile";
+import MyTravel from "./screens/MyTravel";
 
 
 const Tab = createBottomTabNavigator();
