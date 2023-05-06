@@ -1,14 +1,16 @@
-import React from 'react';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./components/screens/HomeScreen";
 import Trips from "./components/screens/Trips";
-import { NavigationContainer } from "@react-navigation/native";
+
 import { AntDesign } from "@expo/vector-icons";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+
 
 const MyTabs = () => {
     <Tab.Navigator>
@@ -28,20 +30,24 @@ const MyTabs = () => {
 }
 
 const Routes = () => {
-    <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen
-                name="Home"
-                component={MyTabs}
-                options={{
-                    headerShown: false,
-                }}
-            />
-        </Stack.Navigator>
-    </NavigationContainer>
-}
+    return (
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen
+                    name="Home"
+                    component={MyTabs}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+};
 
 export default Routes;
+
+
 
 
 

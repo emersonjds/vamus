@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // import { Container } from './styles';
 
-const HomeScreen: React.FC = () => {
+const HomeScreen: FC = () => {
     return (
         <>
-            <SafeAreaView>
+            <SafeAreaView
+                style={{
+                    flex: 1,
+                }}
+            >
                 <View
                     style={{
                         flex: 1,
-                        backgroundColor: 'gray'
+                        backgroundColor: 'gray',
+                        alignItems: 'center',
+                        justifyContent: 'center',
                     }}
                 >
                     <Text
