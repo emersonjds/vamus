@@ -5,7 +5,7 @@ import { Divider, Title } from 'react-native-paper';
 import { useTheme } from 'styled-components';
 import Colors from '../../components/Constants';
 import { Box } from '../../components/Spacing';
-import { AntDesign, Entypo } from '@expo/vector-icons';
+import { AntDesign, Entypo, EvilIcons } from '@expo/vector-icons';
 
 
 // import { Container } from './styles';
@@ -22,6 +22,7 @@ const HomeScreen: FC = () => {
             >
                 <Box
                     ml={10}
+                    mb={20}
                 >
                     <Title
                         style={{
@@ -38,7 +39,7 @@ const HomeScreen: FC = () => {
 
                 <View
                     style={{
-
+                        marginTop: 20,
                         alignItems: 'center',
                         justifyContent: 'center',
                         marginBottom: 20
@@ -85,10 +86,9 @@ const HomeScreen: FC = () => {
                         horizontal
                         showsHorizontalScrollIndicator={false}
                     >
-
                         <View
                             style={{
-                                height: 140,
+                                height: 250,
                                 width: 200,
                                 borderWidth: 2,
                                 borderColor: `${Colors.light_gray}`,
@@ -113,7 +113,7 @@ const HomeScreen: FC = () => {
                                 />
                                 <Box
                                     position="absolute"
-                                    top={-90}
+                                    top={-150}
                                     left={160}
                                     right={0}
                                     bottom={0}
@@ -143,71 +143,34 @@ const HomeScreen: FC = () => {
                                         <Text>
                                             98
                                         </Text>
-
                                     </Box>
                                 </Box>
-                            </Box>
 
-                        </View>
-
-                        <View
-                            style={{
-                                height: 140,
-                                width: 150,
-                                borderWidth: 2,
-                                borderColor: `${Colors.light_gray}`,
-                                marginRight: 10,
-                                borderRadius: 10,
-                            }}>
-                            <Box
-                                justifyContent="flex-end"
-                                alignItems="flex-end"
-                            >
                                 <Box
-                                    position="absolute"
-                                    top={15}
-                                    left={0}
-                                    right={0}
-                                    bottom={0}
-                                    height={35}
-                                    width={35}
+                                    flexDirection="row"
+                                    justifyContent="space-between"
+                                    mt={10}
                                 >
-                                    <AntDesign name="hearto" size={24} color="black" />
+                                    <Box
+                                        flexDirection="row"
+                                    >
+                                        <EvilIcons name="location" size={24} color="black" />
+                                        <Text>
+                                            U.S
+                                        </Text>
+                                    </Box>
+
+                                    <Box>
+                                        <Text>
+                                            P/P R$ 1.000,00
+                                        </Text>
+                                    </Box>
+
                                 </Box>
+
+
                             </Box>
-
                         </View>
-
-                        <View
-                            style={{
-                                height: 140,
-                                width: 150,
-                                borderWidth: 2,
-                                borderColor: `${Colors.light_gray}`,
-                                marginRight: 10,
-                                borderRadius: 10,
-                            }}>
-                            <Box
-                                justifyContent="flex-end"
-                                alignItems="flex-end"
-                            >
-                                <Box
-                                    position="absolute"
-                                    top={15}
-                                    left={0}
-                                    right={0}
-                                    bottom={0}
-                                    height={35}
-                                    width={35}
-                                >
-                                    <AntDesign name="hearto" size={24} color="black" />
-                                </Box>
-                            </Box>
-
-                        </View>
-
-
-
                     </ScrollView>
                 </View>
 
