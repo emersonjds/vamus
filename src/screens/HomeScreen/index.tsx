@@ -29,14 +29,10 @@ const HomeScreen: FC = () => {
                             fontWeight: 'bold',
                         }}
                     >
-                        Bem vindo, Emerson
+                        Bem-vindo, Emerson
                     </Title>
                 </Box>
-
-
                 <Divider />
-
-
                 <View
                     style={{
                         marginTop: 20,
@@ -59,7 +55,7 @@ const HomeScreen: FC = () => {
                                 justifyContent: 'center',
                             }}
                         >
-                            Iai Vamos pra onde !?
+                            E ai, vai pra onde !?
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -72,10 +68,7 @@ const HomeScreen: FC = () => {
                         Trips mais visitadas
                     </Title>
                 </Box>
-
-
                 <View
-
                 >
                     <ScrollView
                         style={{
@@ -89,7 +82,7 @@ const HomeScreen: FC = () => {
                         <View
                             style={{
                                 height: 250,
-                                width: 200,
+                                width: 250,
                                 borderWidth: 2,
                                 borderColor: `${Colors.light_gray}`,
                                 marginRight: 10,
@@ -114,11 +107,28 @@ const HomeScreen: FC = () => {
                                 <Box
                                     position="absolute"
                                     top={-150}
-                                    left={160}
+                                    left={200}
                                     right={0}
                                     bottom={0}
                                 >
                                     <AntDesign name="hearto" size={24} color="white" />
+                                </Box>
+
+                                <Box
+                                    position="absolute"
+                                    top={-50}
+                                    left={190}
+                                    right={0}
+                                    bottom={0}
+                                >
+                                    <Text
+                                        style={{
+                                            color: `${Colors.white}`,
+                                            fontWeight: 'bold',
+                                        }}
+                                    >
+                                        14/20
+                                    </Text>
                                 </Box>
                             </Box>
                             <Box
@@ -136,16 +146,19 @@ const HomeScreen: FC = () => {
                                     <Box
                                         flexDirection="row"
                                         justifyContent="space-between"
-                                        width={50}
+                                        width={55}
                                         alignItems="center"
                                     >
                                         <Entypo name="eye" size={24} color="black" />
-                                        <Text>
+                                        <Text
+                                            style={{
+                                                marginRight: 5,
+                                            }}
+                                        >
                                             98
                                         </Text>
                                     </Box>
                                 </Box>
-
                                 <Box
                                     flexDirection="row"
                                     justifyContent="space-between"
@@ -159,23 +172,21 @@ const HomeScreen: FC = () => {
                                             U.S
                                         </Text>
                                     </Box>
-
                                     <Box>
-                                        <Text>
+                                        <Text
+                                            style={{
+                                                marginRight: 5,
+                                            }}
+                                        >
                                             P/P R$ 1.000,00
                                         </Text>
                                     </Box>
 
                                 </Box>
-
-
                             </Box>
                         </View>
                     </ScrollView>
                 </View>
-
-
-
             </SafeAreaView>
         </>
     );
