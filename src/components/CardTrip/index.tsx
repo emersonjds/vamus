@@ -1,7 +1,7 @@
 import React from 'react';
-import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Image, SafeAreaView, Text, View } from 'react-native';
 import { Box } from '../Spacing';
-import { Divider, Title } from 'react-native-paper';
+import { Divider } from 'react-native-paper';
 import Colors from '../Constants';
 import { AntDesign, Entypo, EvilIcons } from '@expo/vector-icons';
 import * as S from './styles';
