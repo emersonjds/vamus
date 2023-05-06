@@ -7,24 +7,7 @@ import HomeScreen from './src/components/screens/HomeScreen';
 export default function App() {
   return (
     <>
-      {/* <SafeAreaView
-        style={{
-          flex: 1,
-          backgroundColor: 'red'
-        }}
-      >
-        <View
-          style={{
-            flex: 1
-          }}
-        >
-          <Text>
-            Emerson
-          </Text>
-        </View>
-      </SafeAreaView> */}
       <Routes />
-      {/* <HomeScreen /> */}
     </>
   );
 } 

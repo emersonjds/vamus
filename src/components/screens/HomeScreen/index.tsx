@@ -15,7 +15,6 @@ const HomeScreen: FC = () => {
                 <View
                     style={{
                         flex: 1,
-                        backgroundColor: 'gray',
                         alignItems: 'center',
                         justifyContent: 'center',
                     }}
@@ -26,7 +25,6 @@ const HomeScreen: FC = () => {
                             justifyContent: 'center',
                         }}
                     >
-                        Emerson
                     </Text>
                 </View>
             </SafeAreaView>
