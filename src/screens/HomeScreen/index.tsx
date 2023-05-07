@@ -7,6 +7,7 @@ import { Divider, Text } from 'react-native-paper';
 import TitleTrip from '../../components/TitleTrip';
 import { useNavigation } from '@react-navigation/native';
 import { FontAwesome } from '@expo/vector-icons';
+import { fontWeight } from 'styled-system';
 
 const HomeScreen: FC = () => {
   const navigate = useNavigation();
@@ -125,7 +126,9 @@ const HomeScreen: FC = () => {
                 color: '#fff'
               }}
             >
-              Eai, vamos pra onde ?!
+              Eai,
+              vamus
+              pra onde ?!
             </Text>
           </TouchableOpacity>
         </Box>
