@@ -30,16 +30,18 @@ const Notification: FC = () => {
           mt={10}
           borderWidth={1}
           padding={2}
-          height={80}
+          height={110}
         >
           <Box
             width="20%"
-            // height={52}/
+            height={52}
             borderRadius={5}
             borderWidth={1}
+            alignItems="center"
+            justifyContent="center"
           >
             <Image
-              style={{ width: '100%', height: '100%' }}
+              style={{ height: '100%', width: '100%' }}
               source={require('../../assets/logo/logo-copa.jpeg')}
               resizeMode='contain'
             />
@@ -50,16 +52,20 @@ const Notification: FC = () => {
           >
             <Box
               width="100%"
-              flexDirection="row"
-              justifyContent="space-between"
+            // flexDirection="row"
+            // justifyContent="space-between"
             >
               <Text
                 variant='titleMedium'
               >
                 Viagem - Spectrum - Espanha
               </Text>
-              <Text>
-                23/04
+              <Text variant="bodyMedium"
+                style={{
+                  fontWeight: 'bold'
+                }}
+              >
+                Data: 23/04
               </Text>
             </Box>
             <Box
@@ -90,7 +96,7 @@ const Notification: FC = () => {
 
 
 
-      </Container>
+      </Container >
     </>
   );
 }
