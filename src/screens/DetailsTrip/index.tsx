@@ -41,20 +41,19 @@ const DetailsTrip: FC = () => {
               Detalhes dessa Trip
             </Text>
           </Box>
+          <Box
+            flexDirection="row"
+          >
+            <Avatar.Image size={24} source={require('../../assets/1.png')} />
+            <Avatar.Image size={24} source={require('../../assets/2.png')} />
+          </Box>
           <Box>
             <Text variant='labelLarge'>
               Destino: {title}
             </Text>
           </Box>
 
-          <Box
-            flexDireciton="row"
-            justifyContent="space-between"
 
-          >
-            <Avatar.Image size={24} source={require('../../assets/1.png')} />
-            <Avatar.Image size={24} source={require('../../assets/1.png')} />
-          </Box>
           <Box>
 
             <Text variant='labelLarge'>
