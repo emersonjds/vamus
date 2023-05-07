@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Image } from 'react-native';
 import { Box } from '../../components/Spacing';
 import { Divider, Text } from 'react-native-paper';
 
@@ -95,26 +95,5 @@ const Notification: React.FC = () => {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16
-  },
-  itemContainer: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    marginBottom: 16
-  },
-  timeText: {
-    width: 80,
-    marginRight: 16,
-    color: 'gray'
-  },
-  descriptionText: {
-    flex: 1,
-    color: 'black'
-  }
-});
 
 export default Notification;
