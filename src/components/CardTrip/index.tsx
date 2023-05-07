@@ -3,7 +3,7 @@ import { Box } from '../Spacing';
 import { Text, Card } from 'react-native-paper';
 import PeopleInterested from '../PeopleInterested';
 import HeaderCard from '../HeaderCard';
-import { Entypo, FontAwesome, Ionicons } from '@expo/vector-icons';
+import { Entypo, Ionicons } from '@expo/vector-icons';
 
 
 interface CardTripProps {
@@ -12,7 +12,8 @@ interface CardTripProps {
   views?: number;
   pp?: string;
   onPress?: () => void;
-  icon: JSX.Element;
+  icon?: JSX.Element;
+  country?: string;
 }
 
 const CardTrip: FC<CardTripProps> = ({
@@ -22,6 +23,7 @@ const CardTrip: FC<CardTripProps> = ({
   pp,
   onPress,
   icon,
+  country,
 }) => {
   return (
     <>
@@ -82,8 +84,13 @@ const CardTrip: FC<CardTripProps> = ({
                     marginRight: 5,
                   }}
                 />
-                <Text>
-                  Estados Unidos
+                <Text
+                  style={{
+                    color: '#000'
+                  }}
+                >
+                  {/* Estados Unidos */}
+                  {country}
                 </Text>
               </Box>
               <Box

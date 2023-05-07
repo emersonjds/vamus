@@ -14,6 +14,7 @@ import Profile from "./screens/Profile";
 import MyTravel from "./screens/MyTravel";
 import DetailsTrip from "./screens/DetailsTrip";
 import Notification from "./screens/Notification";
+import Proposal from "./screens/Proposal";
 
 
 const Tab = createBottomTabNavigator();
@@ -32,17 +33,6 @@ const MyTabs = () => {
           headerShown: false,
           tabBarIcon: ({ color }) => (
             <AntDesign name="home" size={24} color="black" />
-          ),
-        }} />
-      <Tab.Screen name="MyTravel" component={MyTravel}
-        options={{
-          tabBarLabel: "Minhas Viagens",
-          tabBarLabelStyle: {
-            color: "#000",
-          },
-          headerShown: false,
-          tabBarIcon: ({ color }) => (
-            <Entypo name="list" size={24} color="black" />
           ),
         }} />
 
@@ -88,9 +78,11 @@ const Routes = () => {
         <Stack.Screen
           name="DetailsTrip"
           component={DetailsTrip}
-          options={{
-            headerShown: false,
-          }}
+        />
+        <Stack.Screen
+          name="Proposal"
+          component={Proposal}
+
         />
       </Stack.Navigator>
     </NavigationContainer>
