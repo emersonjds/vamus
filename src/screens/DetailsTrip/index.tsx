@@ -41,12 +41,20 @@ const DetailsTrip: FC = () => {
               Detalhes dessa Trip
             </Text>
           </Box>
-          <Box
-            flexDirection="row"
-          >
-            <Avatar.Image size={24} source={require('../../assets/1.png')} />
-            <Avatar.Image size={24} source={require('../../assets/2.png')} />
+
+          <Box>
+            <Box
+              flexDirection="row"
+            >
+              <Avatar.Image size={24} source={require('../../assets/1.png')} />
+              <Avatar.Image size={24} source={require('../../assets/2.png')} />
+            </Box>
+            <Text variant='labelLarge'>
+              14 de 20 pessoas ja fecharam essa trip
+            </Text>
           </Box>
+
+
           <Box>
             <Text variant='labelLarge'>
               Destino: {title}
@@ -54,12 +62,7 @@ const DetailsTrip: FC = () => {
           </Box>
 
 
-          <Box>
 
-            <Text variant='labelLarge'>
-              14 de 20 pessoas ja fecharam essa trip
-            </Text>
-          </Box>
 
           <Box>
             <Text variant='labelLarge'>
@@ -71,7 +74,6 @@ const DetailsTrip: FC = () => {
           <Box>
             <Text variant='labelLarge'>
               Valor por pessoa {pp}
-
             </Text>
           </Box>
         </Box>
@@ -80,7 +82,15 @@ const DetailsTrip: FC = () => {
           mb={10}
         >
           <Divider />
+        </Box>
 
+        <Box>
+          <Text>
+            Observações:
+          </Text>
+          <Text>
+            Essa viagem contempla acessibilidade e cuidados para pessoas especiais
+          </Text>
         </Box>
 
 
