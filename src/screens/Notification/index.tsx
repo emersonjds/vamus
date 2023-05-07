@@ -11,7 +11,11 @@ const Notification: FC = () => {
 
   return (
     <>
-      <Container>
+      <Container
+        style={{
+          marginTop: 30
+        }}
+      >
         <Text variant="titleLarge">Notificações</Text>
         <Text
           variant='titleMedium'
