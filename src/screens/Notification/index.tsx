@@ -12,7 +12,9 @@ const Notification: React.FC = () => {
     <>
       <Container>
         <Text variant="titleLarge">Notificações</Text>
-        <Text>
+        <Text
+          variant='titleMedium'
+        >
           Aqui voce acompanha o andamento das suas viagens, interesses, trips fechadas e desistencias
         </Text>
         <Box
@@ -29,10 +31,13 @@ const Notification: React.FC = () => {
           mt={10}
           borderWidth={1}
           padding={2}
+          height={80}
         >
           <Box
             width="20%"
-            height={52}
+            // height={52}/
+            borderRadius={5}
+            borderWidth={1}
           >
             <Image
               style={{ width: '100%', height: '100%' }}
