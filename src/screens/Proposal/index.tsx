@@ -5,6 +5,7 @@ import { Alert, ScrollView } from 'react-native';
 import { Switch } from 'react-native-paper';
 import { List } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import { marginBottom } from 'styled-system';
 
 
 const Proposal: React.FC = () => {
@@ -17,6 +18,7 @@ const Proposal: React.FC = () => {
   const [stars, setStars] = useState(3);
   const [valueTrip, setValueTrip] = useState(0);
   const navigate = useNavigation();
+  const [tripPeople, setTripPeople] = useState(20)
 
 
   const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
@@ -114,14 +116,15 @@ const Proposal: React.FC = () => {
                   <List.Accordion
                     title="Autismo"
                   >
-                    <List.Item title="Cadeira de Rodas" />
-                    <List.Item title="Second item" />
+                    <List.Item title="Sindrome de Rett" />
+                    <List.Item title="Síndrome de Asperger" />
                   </List.Accordion>
                   <List.Accordion
                     title="Mobilidade"
                   >
                     <List.Item title="Cadeira de Rodas" />
-                    <List.Item title="Second item" />
+                    <List.Item title="Deficiencia Auditiva" />
+                    <List.Item title="Deficiencia Visual" />
                   </List.Accordion>
                 </List.Section>
               </Box>
@@ -187,8 +190,8 @@ const Proposal: React.FC = () => {
                     <List.Accordion
                       title="Popular"
                     >
-                      <List.Item title="Cadeira de Rodas" />
-                      <List.Item title="Second item" />
+                      <List.Item title="Fiat Uno" />
+                      <List.Item title="HB20" />
                     </List.Accordion>
                   </List.Section>
                 </Box>
@@ -200,7 +203,7 @@ const Proposal: React.FC = () => {
           <Box>
             <Text
               style={{
-                marginTop: 10
+                marginTop: 20,
               }}
             >
               Quanto está disposto a gastar nessa viagem ?
@@ -216,29 +219,52 @@ const Proposal: React.FC = () => {
               />
             </Box>
           </Box>
+
+          <Box>
+            <Text
+              style={{
+                marginTop: 20,
+              }}
+            >
+              Lembre-se, essa trip sera criado para até 20 pessoas
+            </Text>
+            <Box>
+              <TextInput
+                style={{
+                  marginTop: 10
+                }}
+                label="Quantidade de pessoas desta trip"
+                onChange={setTripPeople}
+                value={tripPeople.toString()}
+              />
+            </Box>
+          </Box>
+
+          <Button
+            style={{
+              backgroundColor: '#F2C94C',
+              marginTop: 30
+            }}
+
+            onPress={() => {
+              Alert.alert(
+                "PACOTE CRIADO COM SUCESSO",
+                "OBBBAAAAA, VAMOS ENCONTRAR OUTROS VIAJANTES PARA COMPARTILHAR ESSA EXPERIENCIA COM VOCE",
+                [
+                  {
+                    text: "OK",
+                    onPress: () => navigate.navigate('HomeScreen')
+                  }
+                ]
+              )
+            }
+            }
+          >
+            Criar Pacote
+          </Button>
         </ScrollView>
 
-        <Button
-          style={{
-            backgroundColor: '#F2C94C',
-          }}
 
-          onPress={() => {
-            Alert.alert(
-              "PACOTE CRIADO COM SUCESSO",
-              "OBBBAAAAA, VAMOS ENCONTRAR OUTROS VIAJANTES PARA COMPARTILHAR ESSA EXPERIENCIA COM VOCE",
-              [
-                {
-                  text: "OK",
-                  onPress: () => navigate.navigate('HomeScreen')
-                }
-              ]
-            )
-          }
-          }
-        >
-          Criar Pacote
-        </Button>
 
       </Container>
     </>

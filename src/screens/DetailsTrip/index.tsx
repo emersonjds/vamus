@@ -41,36 +41,30 @@ const DetailsTrip: FC = () => {
               Detalhes dessa Trip
             </Text>
           </Box>
-
           <Box>
             <Box
               flexDirection="row"
             >
               <Avatar.Image size={24} source={require('../../assets/1.png')} />
               <Avatar.Image size={24} source={require('../../assets/2.png')} />
+              <Avatar.Image size={24} source={require('../../assets/dru.jpeg')} />
+              <Avatar.Image size={24} source={require('../../assets/alba.jpeg')} />
             </Box>
             <Text variant='labelLarge'>
               14 de 20 pessoas ja fecharam essa trip
             </Text>
           </Box>
-
-
           <Box>
             <Text variant='labelLarge'>
               Destino: {title}
             </Text>
           </Box>
-
-
-
-
           <Box>
             <Text variant='labelLarge'>
               Há &nbsp;
               {views} pessoas interessadas nessa viagem
             </Text>
           </Box>
-
           <Box>
             <Text variant='labelLarge'>
               Valor por pessoa {pp}
@@ -83,7 +77,6 @@ const DetailsTrip: FC = () => {
         >
           <Divider />
         </Box>
-
         <Box>
           <Text>
             Observações:
