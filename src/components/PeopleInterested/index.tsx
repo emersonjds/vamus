@@ -7,7 +7,7 @@ const PeopleInterested: FC = () => {
     <>
       <Box
         position="absolute"
-        top={-60}
+        top={-100}
         left={280}
         right={0}
         bottom={0}

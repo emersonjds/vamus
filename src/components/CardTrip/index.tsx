@@ -56,8 +56,11 @@ const CardTrip: React.FC = () => {
                   }}
                 />
                 <Card.Content>
-                  <Text variant="titleLarge">Card title</Text>
-                  <Text variant="bodyMedium">Card content</Text>
+                  <Box>
+
+                    <Text variant="bodyMedium">Card content</Text>
+                  </Box>
+
                 </Card.Content>
 
                 <HeaderCard
