@@ -114,7 +114,60 @@ const Trips: React.FC = () => {
           >
             Minhas Ultimas viagens
           </Text>
+
+          <Text
+            variant='titleSmall'
+          >
+            Boas lembranças com a VAMUS
+          </Text>
+
+          <Text
+            variant='titleSmall'
+            style={{
+              color: 'purple'
+            }}
+          >
+            Data: 06/11
+          </Text>
+
+          <Text
+            variant='titleMedium'
+            style={{
+              color: 'purple'
+            }}
+          >
+            * Salto de paraquedas em Minas com cadeirantes
+          </Text>
+          <Text
+
+            variant='titleSmall'
+            style={{
+              color: 'purple'
+            }}
+          >
+            20/20 pessoas
+          </Text>
+          <Text
+
+            variant='titleSmall'
+            style={{
+              color: 'purple'
+            }}
+          >
+            Valor por pessoa R$: 1300,00
+          </Text>
+          <Box
+            mt={20}
+            mb={20}
+          >
+            <Divider />
+          </Box>
+
         </Box>
+
+
+
+
       </Container>
 
     </>
