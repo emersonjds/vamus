@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Image } from 'react-native';
 import { Box } from '../../components/Spacing';
 import { Divider, Text } from 'react-native-paper';
 
 import { Container } from '../../components/Spacing';
 
-
-const Notification: React.FC = () => {
+const Notification: FC = () => {
 
   return (
     <>
