@@ -4,20 +4,24 @@ import { Text, Card } from 'react-native-paper';
 import PeopleInterested from '../PeopleInterested';
 import HeaderCard from '../HeaderCard';
 import Colors from '../Constants';
+import { Entypo, Ionicons } from '@expo/vector-icons';
 
 
 interface CardTripProps {
   uri?: string;
   title?: string;
+  views?: number;
+  pp?: string;
 }
 
 const CardTrip: FC<CardTripProps> = ({
   uri,
   title,
+  views,
+  pp
 }) => {
   return (
     <>
-
       <Box
         style={{
           flex: 1,
@@ -25,8 +29,7 @@ const CardTrip: FC<CardTripProps> = ({
         }}>
         <Card
           style={{
-            borderColor: `${Colors.gray}`,
-            borderWidth: 0.3,
+            height: 280,
           }}
         >
           <Card.Cover source={{ uri: uri }}
@@ -36,8 +39,58 @@ const CardTrip: FC<CardTripProps> = ({
             }}
           />
           <Card.Content>
-            <Box>
-              <Text variant="bodyMedium">Card content</Text>
+            <Box
+              flexDirection="row"
+              justifyContent="space-between"
+              alignItems="center"
+              mt={10}
+            >
+              <Text variant="bodyLarge">Visualizações</Text>
+              <Box
+                flexDirection="row"
+                alignItems="center"
+              >
+                <Entypo name="eye" size={24} color="black"
+                  style={{
+                    marginRight: 5,
+                  }}
+                />
+                <Text>
+                  {views}
+                </Text>
+              </Box>
+            </Box>
+          </Card.Content>
+
+          <Card.Content>
+            <Box
+              flexDirection="row"
+              justifyContent="space-between"
+              alignItems="center"
+              mt={10}
+            >
+              <Box
+                flexDirection="row"
+                alignItems="center"
+              >
+                <Ionicons name="location-outline" size={24} color="black"
+                  style={{
+                    marginRight: 5,
+                  }}
+                />
+                <Text>
+                  Estados Unidos
+                </Text>
+              </Box>
+              <Box
+                flexDirection="row"
+                alignItems="center"
+              >
+                <Text>
+                  P/P &nbsp;
+                  {pp}
+                </Text>
+              </Box>
             </Box>
           </Card.Content>
           <HeaderCard

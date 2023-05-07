@@ -14,7 +14,7 @@ const HeaderCard: FC<HeaderCardProps> = ({ title }) => {
         height={50}
         backgroundColor="black"
         position="absolute"
-        top={-215}
+        top={-265}
         borderTopLeftRadius={15}
         borderTopRightRadius={15}
         opacity={0.8}

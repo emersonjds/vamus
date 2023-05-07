@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Box } from '../../components/Spacing';
 import CardTrip from '../../components/CardTrip';
 import UserHeader from '../../components/UserHeader';
-import { ScrollView, Touchable, TouchableOpacity } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Divider } from 'react-native-paper';
 import TitleTrip from '../../components/TitleTrip';
 
@@ -10,7 +10,9 @@ const travels = [
   {
     id: 1,
     title: 'S. Francisco - EUA',
-    uri: 'https://www.segurospromo.com.br/blog/wp-content/uploads/2020/10/sao-francisco-capa-750x360.jpg'
+    uri: 'https://www.segurospromo.com.br/blog/wp-content/uploads/2020/10/sao-francisco-capa-750x360.jpg',
+    views: 90,
+    pp: 'R$ 1.500,00'
   },
   {
     id: 2,
@@ -53,7 +55,6 @@ const HomeScreen: FC = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
         >
-
           {
             travels.map((travel) => (
 
@@ -61,16 +62,12 @@ const HomeScreen: FC = () => {
                 key={travel.id}
                 uri={travel.uri}
                 title={travel.title}
+                views={travel.views}
+                pp={travel.pp}
               />
-
-
             ))
           }
-
-
-
         </ScrollView>
-
       </Box>
     </>
   );
