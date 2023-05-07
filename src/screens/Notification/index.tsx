@@ -65,6 +65,52 @@ const Notification: React.FC = () => {
             </Box>
           </Box>
         </Box>
+
+        <Box
+          width="100%"
+          bg="red"
+          flexDirection="row"
+          justifyContent="space-between"
+          borderRadius={5}
+          mt={10}
+          borderWidth={1}
+          padding={2}
+        >
+          <Box
+            width="20%"
+            height={52}
+          >
+            <Image
+              style={{ width: '100%', height: '100%' }}
+              source={require('../../assets/logo/logo-copa.jpeg')}
+              resizeMode='contain'
+            />
+          </Box>
+          <Box
+            width="75%"
+            height={52}
+          >
+            <Box
+              width="100%"
+              flexDirection="row"
+              justifyContent="space-between"
+            >
+              <Text>
+                Viagem - Spectrum - Espanha
+              </Text>
+              <Text>
+                23/04
+              </Text>
+            </Box>
+            <Box>
+              <Text>
+                A empresa Copastur esta analisando essa viagem e logo entrara em contato
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+
+
       </Container>
     </>
   );
