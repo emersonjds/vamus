@@ -1,77 +1,51 @@
-import React from 'react';
-import { SafeAreaView } from 'react-native';
+import React, { FC } from 'react';
 import { Box } from '../Spacing';
-import { Button, Divider, Text } from 'react-native-paper';
-import * as S from './styles';
-import UserHeader from '../UserHeader';
-import TitleTrip from '../TitleTrip';
-import { Card } from 'react-native-paper';
-
-import Heart from '../Heart';
+import { Text, Card } from 'react-native-paper';
 import PeopleInterested from '../PeopleInterested';
-import Colors from '../Constants';
 import HeaderCard from '../HeaderCard';
+import Colors from '../Constants';
 
 
-const CardTrip: React.FC = () => {
+interface CardTripProps {
+  uri?: string;
+  title?: string;
+}
+
+const CardTrip: FC<CardTripProps> = ({
+  uri,
+  title,
+}) => {
   return (
     <>
-      <SafeAreaView
+
+      <Box
         style={{
           flex: 1,
-        }}
-      >
-        {/* #HEADER */}
-        <Box ml={10}>
-          <UserHeader />
-        </Box>
-        {/* #HEADER */}
-
-        <Divider />
-
-        <Box>
-          <TitleTrip />
-        </Box>
-
-        <Box>
-          <S.ScrollTrips
-            horizontal
-            showsHorizontalScrollIndicator={false}
-          >
-            <Box
-              style={{
-                width: '100%',
-              }}
-            >
-              <Card
-                style={{
-                  borderColor: `${Colors.gray}`,
-                  borderWidth: 0.3,
-                }}
-              >
-                <Card.Cover source={{ uri: 'https://www.segurospromo.com.br/blog/wp-content/uploads/2020/10/sao-francisco-capa-750x360.jpg' }}
-                  style={{
-                    width: 350,
-                    borderRadius: 0,
-                  }}
-                />
-                <Card.Content>
-                  <Box>
-
-                    <Text variant="bodyMedium">Card content</Text>
-                  </Box>
-
-                </Card.Content>
-
-                <HeaderCard
-                  title="S. Francisco - EUA"
-                />
-                <PeopleInterested />
-              </Card>
+          marginLeft: 15,
+        }}>
+        <Card
+          style={{
+            borderColor: `${Colors.gray}`,
+            borderWidth: 0.3,
+          }}
+        >
+          <Card.Cover source={{ uri: uri }}
+            style={{
+              width: 350,
+              borderRadius: 0,
+            }}
+          />
+          <Card.Content>
+            <Box>
+              <Text variant="bodyMedium">Card content</Text>
             </Box>
-          </S.ScrollTrips>
-        </Box>
-      </SafeAreaView >
+          </Card.Content>
+          <HeaderCard
+            title={title}
+          />
+          <PeopleInterested />
+        </Card>
+      </Box>
     </>
   )
 
