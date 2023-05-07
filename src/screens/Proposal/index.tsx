@@ -116,8 +116,8 @@ const Proposal: React.FC = () => {
                   <List.Accordion
                     title="Autismo"
                   >
-                    <List.Item title="Sindrome de Rett" />
-                    <List.Item title="Síndrome de Asperger" />
+                    <List.Item title="Sensibilidade ao som" />
+                    <List.Item title="Fobial Social" />
                   </List.Accordion>
                   <List.Accordion
                     title="Mobilidade"

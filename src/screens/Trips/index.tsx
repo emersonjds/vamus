@@ -57,7 +57,9 @@ const Trips: React.FC = () => {
               source={require('../../assets/aventura.jpeg')}
               resizeMode='cover'
             />
-            <Text>
+            <Text
+              variant="titleLarge"
+            >
               Aventura
             </Text>
 
@@ -73,13 +75,14 @@ const Trips: React.FC = () => {
                 width: '100%',
                 borderRadius: 10
               }}
-              source={require('../../assets/aventura.jpeg')}
+              source={require('../../assets/praia.webp')}
               resizeMode='cover'
             />
-            <Text>
+            <Text
+              variant="titleLarge"
+            >
               Lazer
             </Text>
-
           </Box>
           <Box
             width={300}
@@ -92,10 +95,12 @@ const Trips: React.FC = () => {
                 width: '100%',
                 borderRadius: 10
               }}
-              source={require('../../assets/aventura.jpeg')}
+              source={require('../../assets/museu.jpeg')}
               resizeMode='cover'
             />
-            <Text>
+            <Text
+              variant="titleLarge"
+            >
               Conhecimento
             </Text>
           </Box>
@@ -107,7 +112,7 @@ const Trips: React.FC = () => {
         >
           <Text variant='titleSmall'
           >
-            Minhaas Ultimas viagens
+            Minhas Ultimas viagens
           </Text>
         </Box>
       </Container>
