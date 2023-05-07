@@ -5,6 +5,8 @@ import { Box, Container } from '../../components/Spacing';
 import { Image } from 'react-native';
 import { ProgressBar, Colors } from 'react-native-paper';
 import { FontAwesome } from '@expo/vector-icons';
+import { Avatar } from 'react-native-paper';
+
 
 
 const DetailsTrip: FC = () => {
@@ -45,7 +47,16 @@ const DetailsTrip: FC = () => {
             </Text>
           </Box>
 
+          <Box
+            flexDireciton="row"
+            justifyContent="space-between"
+
+          >
+            <Avatar.Image size={24} source={require('../../assets/1.png')} />
+            <Avatar.Image size={24} source={require('../../assets/1.png')} />
+          </Box>
           <Box>
+
             <Text variant='labelLarge'>
               14 de 20 pessoas ja fecharam essa trip
             </Text>
@@ -74,7 +85,7 @@ const DetailsTrip: FC = () => {
         </Box>
 
 
-      </Container>
+      </Container >
     </>
   );
 }
