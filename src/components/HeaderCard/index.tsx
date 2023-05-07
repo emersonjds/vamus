@@ -37,9 +37,7 @@ const HeaderCard: FC<HeaderCardProps> = ({ title }) => {
                 fontSize: 20,
               }}
             >
-              {
-                title
-              }
+              {title}
             </Text>
             <Heart />
           </Box>
