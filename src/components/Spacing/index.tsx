@@ -45,6 +45,7 @@ export const Container = styled.View`
   padding: 20px;
   flex: 1;
   margin-top: 20px;
+  background-color: ${Colors.white};
 `;
 
 export const ButtonDefault = styled.TouchableOpacity`
