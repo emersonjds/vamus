@@ -1,12 +1,17 @@
 import React from 'react';
-import { Image, SafeAreaView, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import { Box } from '../Spacing';
-import { Divider } from 'react-native-paper';
-import Colors from '../Constants';
-import { AntDesign, Entypo, EvilIcons } from '@expo/vector-icons';
+import { Button, Divider, Text } from 'react-native-paper';
 import * as S from './styles';
 import UserHeader from '../UserHeader';
 import TitleTrip from '../TitleTrip';
+import { Card } from 'react-native-paper';
+
+import Heart from '../Heart';
+import PeopleInterested from '../PeopleInterested';
+import Colors from '../Constants';
+import HeaderCard from '../HeaderCard';
+
 
 const CardTrip: React.FC = () => {
   return (
@@ -28,117 +33,41 @@ const CardTrip: React.FC = () => {
           <TitleTrip />
         </Box>
 
-        <View>
+        <Box>
           <S.ScrollTrips
             horizontal
             showsHorizontalScrollIndicator={false}
           >
-            <View
+            <Box
               style={{
-                height: 250,
-                width: 250,
-                borderWidth: 2,
-                borderColor: `${Colors.light_gray}`,
-                marginRight: 10,
-                borderRadius: 10,
-              }}>
-              <Box
-                height={'70%'}
-                width={'100%'}
+                width: '100%',
+              }}
+            >
+              <Card
+                style={{
+                  borderColor: `${Colors.gray}`,
+                  borderWidth: 0.3,
+                }}
               >
-                <Image
+                <Card.Cover source={{ uri: 'https://www.segurospromo.com.br/blog/wp-content/uploads/2020/10/sao-francisco-capa-750x360.jpg' }}
                   style={{
-                    width: '100%',
-                    height: '100%',
-                    borderTopLeftRadius: 10,
-                    borderTopRightRadius: 10,
+                    width: 350,
+                    borderRadius: 0,
                   }}
-                  source={require('../../assets/sf.jpeg')}
-                  resizeMode='stretch'
-
                 />
-                <Box
-                  position="absolute"
-                  top={-150}
-                  left={200}
-                  right={0}
-                  bottom={0}
-                >
-                  <AntDesign name="hearto" size={24} color="white" />
-                </Box>
+                <Card.Content>
+                  <Text variant="titleLarge">Card title</Text>
+                  <Text variant="bodyMedium">Card content</Text>
+                </Card.Content>
 
-                <Box
-                  position="absolute"
-                  top={-50}
-                  left={190}
-                  right={0}
-                  bottom={0}
-                >
-                  <Text
-                    style={{
-                      color: `${Colors.white}`,
-                      fontWeight: 'bold',
-                    }}
-                  >
-                    14/20
-                  </Text>
-                </Box>
-              </Box>
-              <Box
-                mt={10}
-                ml={10}
-              >
-                <Box
-                  flexDirection="row"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Text>
-                    São Paulo
-                  </Text>
-                  <Box
-                    flexDirection="row"
-                    justifyContent="space-between"
-                    width={55}
-                    alignItems="center"
-                  >
-                    <Entypo name="eye" size={24} color="black" />
-                    <Text
-                      style={{
-                        marginRight: 5,
-                      }}
-                    >
-                      98
-                    </Text>
-                  </Box>
-                </Box>
-                <Box
-                  flexDirection="row"
-                  justifyContent="space-between"
-                  mt={10}
-                >
-                  <Box
-                    flexDirection="row"
-                  >
-                    <EvilIcons name="location" size={24} color="black" />
-                    <Text>
-                      U.S
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Text
-                      style={{
-                        marginRight: 5,
-                      }}
-                    >
-                      P/P R$ 1.000,00
-                    </Text>
-                  </Box>
-                </Box>
-              </Box>
-            </View>
+                <HeaderCard
+                  title="S. Francisco - EUA"
+                />
+                <PeopleInterested />
+              </Card>
+            </Box>
           </S.ScrollTrips>
-        </View>
+        </Box>
       </SafeAreaView >
     </>
   )
