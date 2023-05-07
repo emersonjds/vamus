@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "./screens/HomeScreen";
 import Trips from "./screens/Trips";
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
 
@@ -13,6 +13,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Profile from "./screens/Profile";
 import MyTravel from "./screens/MyTravel";
 import DetailsTrip from "./screens/DetailsTrip";
+import Notification from "./screens/Notification";
 
 
 const Tab = createBottomTabNavigator();
@@ -57,15 +58,15 @@ const MyTabs = () => {
           ),
         }} />
 
-      <Tab.Screen name="Profile" component={Profile}
+      <Tab.Screen name="Profile" component={Notification}
         options={{
-          tabBarLabel: "Perfil",
+          tabBarLabel: "Notificações",
           tabBarLabelStyle: {
             color: "#000",
           },
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <AntDesign name="user" size={24} color="black" />
+            <Entypo name="notification" size={24} color="black" />
           ),
         }} />
 

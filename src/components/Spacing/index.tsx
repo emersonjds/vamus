@@ -44,7 +44,7 @@ export const Divider = styled.View<BoxProps>`
 export const Container = styled.View`
   padding: 20px;
   flex: 1;
-  background-color: ${Colors.white};
+  margin-top: 20px;
 `;
 
 export const ButtonDefault = styled.TouchableOpacity`

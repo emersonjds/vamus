@@ -5,8 +5,6 @@ import { Box } from '../../components/Spacing';
 
 const DetailsTrip: FC = () => {
   const route = useRoute();
-  // console.log(JSON.stringify(route.params));
-
   const { id, title, uri, views, pp } = route.params;
 
   return (
