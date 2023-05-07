@@ -1,10 +1,17 @@
 import React from 'react';
-import { View } from 'react-native';
-
-// import { Container } from './styles';
+import { Box, Container } from '../../components/Spacing';
+import { Text } from 'react-native-paper';
 
 const MyTravel: React.FC = () => {
-    return <View />;
+  return (
+    <>
+      <Container>
+        <Box>
+          <Text variant="titleLarge">Locais ja visitados</Text>
+        </Box>
+      </Container>
+    </>
+  );
 }
 
 export default MyTravel;

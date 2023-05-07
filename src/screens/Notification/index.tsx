@@ -7,6 +7,8 @@ import { Container } from '../../components/Spacing';
 
 const Notification: FC = () => {
 
+  // #TODO - Ajustar borda de imagem
+
   return (
     <>
       <Container>
