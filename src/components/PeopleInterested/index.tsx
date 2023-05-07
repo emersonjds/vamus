@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Box } from '../Spacing';
 import { Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 const PeopleInterested: FC = () => {
   return (
@@ -8,10 +9,11 @@ const PeopleInterested: FC = () => {
       <Box
         position="absolute"
         top={-150}
-        left={280}
+        left={260}
         right={0}
         bottom={0}
         zIndex={1}
+        flexDirection="row"
       >
         <Text
           style={{
@@ -22,6 +24,12 @@ const PeopleInterested: FC = () => {
         >
           14/20
         </Text>
+        <Ionicons name="people" size={24} color="white"
+          style={{
+            marginLeft: 5,
+          }}
+        />
+
       </Box>
     </>
   );

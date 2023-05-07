@@ -3,8 +3,7 @@ import { Box } from '../Spacing';
 import { Text, Card } from 'react-native-paper';
 import PeopleInterested from '../PeopleInterested';
 import HeaderCard from '../HeaderCard';
-import Colors from '../Constants';
-import { Entypo, Ionicons } from '@expo/vector-icons';
+import { Entypo, FontAwesome, Ionicons } from '@expo/vector-icons';
 
 
 interface CardTripProps {
@@ -12,13 +11,17 @@ interface CardTripProps {
   title?: string;
   views?: number;
   pp?: string;
+  onPress?: () => void;
+  icon: JSX.Element;
 }
 
 const CardTrip: FC<CardTripProps> = ({
   uri,
   title,
   views,
-  pp
+  pp,
+  onPress,
+  icon,
 }) => {
   return (
     <>
@@ -31,6 +34,7 @@ const CardTrip: FC<CardTripProps> = ({
           style={{
             height: 280,
           }}
+          onPress={onPress}
         >
           <Card.Cover source={{ uri: uri }}
             style={{
@@ -87,8 +91,7 @@ const CardTrip: FC<CardTripProps> = ({
                 alignItems="center"
               >
                 <Text>
-                  P/P &nbsp;
-                  {pp}
+                  {pp} &nbsp;
                 </Text>
               </Box>
             </Box>
@@ -97,6 +100,19 @@ const CardTrip: FC<CardTripProps> = ({
             title={title}
           />
           <PeopleInterested />
+          <Box
+            position="absolute"
+            top={-210}
+            left={310}
+            right={0}
+            bottom={0}
+            zIndex={1}
+            flexDirection="row"
+          >
+            {
+              icon
+            }
+          </Box>
         </Card>
       </Box>
     </>

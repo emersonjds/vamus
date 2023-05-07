@@ -1,10 +1,13 @@
 // import React from 'react';
 import Routes from './src/routes';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Text, View } from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
+import { LogBox } from 'react-native';
 
 export default function App() {
+
+  LogBox.ignoreLogs([
+    'Non-serializable values were found in the navigation state',
+  ]);
+
   return (
     <>
       <Routes />
