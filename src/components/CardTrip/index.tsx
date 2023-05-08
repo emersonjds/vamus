@@ -12,7 +12,7 @@ interface CardTripProps {
   views?: number;
   pp?: string;
   onPress?: () => void;
-  icon?: JSX.Element;
+  icon?: any;
   country?: string;
 }
 

@@ -6,7 +6,8 @@ import { Title } from 'react-native-paper';
 const TitleTrip: React.FC = () => {
     return (
         <>
-            <Box ml={20} mt={20}>
+            <Box ml={20} mt={20}
+                mb={20}>
                 <Title>
                     Trips mais visitadas
                 </Title>
