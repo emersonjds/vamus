@@ -15,6 +15,7 @@ import MyTravel from "./screens/MyTravel";
 import DetailsTrip from "./screens/DetailsTrip";
 import Notification from "./screens/Notification";
 import Proposal from "./screens/Proposal";
+import { RootStackParamList } from "./types/route";
 
 
 const Tab = createBottomTabNavigator();
@@ -64,7 +65,8 @@ const MyTabs = () => {
   )
 }
 
-const Routes = () => {
+// @ts-ignore
+const Routes: RootStackParamList = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -78,11 +80,16 @@ const Routes = () => {
         <Stack.Screen
           name="DetailsTrip"
           component={DetailsTrip}
+          options={{
+            title: 'Detalhes'
+          }}
         />
         <Stack.Screen
           name="Proposal"
           component={Proposal}
-
+          options={{
+            title: 'Criar Trip'
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
