@@ -23,7 +23,7 @@ const Trips: React.FC = () => {
           mt={30}
         >
           <Searchbar
-            placeholder="Por qual tipo de trip voce se interessa"
+            placeholder="Qual tipo de trip voce se interessa ?!"
             onChangeText={onChangeSearch}
             value={searchQuery}
           />
@@ -117,6 +117,9 @@ const Trips: React.FC = () => {
 
           <Text
             variant='titleSmall'
+            style={{
+              fontWeight: 'bold'
+            }}
           >
             Boas lembranças com a VAMUS
           </Text>
@@ -124,7 +127,7 @@ const Trips: React.FC = () => {
           <Text
             variant='titleSmall'
             style={{
-              color: 'purple'
+              color: 'black'
             }}
           >
             Data: 06/11
@@ -133,7 +136,7 @@ const Trips: React.FC = () => {
           <Text
             variant='titleMedium'
             style={{
-              color: 'purple'
+              color: 'black'
             }}
           >
             * Salto de paraquedas em Minas com cadeirantes
@@ -142,7 +145,7 @@ const Trips: React.FC = () => {
 
             variant='titleSmall'
             style={{
-              color: 'purple'
+              color: 'black'
             }}
           >
             20/20 pessoas
@@ -151,7 +154,7 @@ const Trips: React.FC = () => {
 
             variant='titleSmall'
             style={{
-              color: 'purple'
+              color: 'black'
             }}
           >
             Valor por pessoa R$: 1300,00

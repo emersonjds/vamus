@@ -35,6 +35,7 @@ const HomeScreen: FC = () => {
       title: 'Salvador - BA',
       uri: 'https://media.tacdn.com/media/attractions-splice-spp-674x446/06/dd/dd/0b.jpg',
       pp: 'R$ 1.500,00',
+      views: 140,
       onPress: () => { },
       country: 'Brasil',
       icon: ''
@@ -44,6 +45,7 @@ const HomeScreen: FC = () => {
       title: 'Gramado - RS',
       uri: 'https://cdn2.revistahoteis.com.br/wp-content/uploads/2023/02/Gramado.jpg',
       pp: 'R$ 1.500,00',
+      views: 300,
       country: 'Brasil',
       onPress: () => { },
       icon: ''
@@ -53,6 +55,7 @@ const HomeScreen: FC = () => {
       title: 'Malagá - ES',
       uri: 'https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/78630616.jpg?quality=70&strip=info&w=919&w=636',
       pp: 'R$ 1.800',
+      views: 198,
       country: 'Espanha',
       onPress: () => { },
       icon: ''

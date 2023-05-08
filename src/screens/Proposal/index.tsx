@@ -10,13 +10,15 @@ import { marginBottom } from 'styled-system';
 
 const Proposal: React.FC = () => {
   const [packageName, setPackageName] = useState('Espanha para Autistas');
-  const [date, setDate] = useState(new Date(1598051730000));
+
+  const [date, setDate] = useState(new Date());
+
   const [checked, setChecked] = React.useState(false);
   const [isSwitchOn, setIsSwitchOn] = React.useState(false);
   const [isSwitchOn2, setIsSwitchOn2] = React.useState(false);
   const [expanded, setExpanded] = React.useState(true);
   const [stars, setStars] = useState(3);
-  const [valueTrip, setValueTrip] = useState(0);
+  const [valueTrip, setValueTrip] = useState(1500);
   const navigate = useNavigation();
   const [tripPeople, setTripPeople] = useState(20)
 

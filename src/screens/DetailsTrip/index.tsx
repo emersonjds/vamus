@@ -3,10 +3,7 @@ import React, { FC } from 'react';
 import { Divider, Text } from 'react-native-paper';
 import { Box, Container } from '../../components/Spacing';
 import { Image } from 'react-native';
-import { ProgressBar, Colors } from 'react-native-paper';
-import { FontAwesome } from '@expo/vector-icons';
 import { Avatar } from 'react-native-paper';
-
 
 
 const DetailsTrip: FC = () => {
@@ -15,7 +12,6 @@ const DetailsTrip: FC = () => {
 
   return (
     <>
-
       <Box
         height={300}
         width="100%"
@@ -61,7 +57,7 @@ const DetailsTrip: FC = () => {
           </Box>
           <Box>
             <Text variant='labelLarge'>
-              Há &nbsp;
+              Há&nbsp;
               {views} pessoas interessadas nessa viagem
             </Text>
           </Box>
