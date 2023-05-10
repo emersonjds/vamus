@@ -1,15 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 interface tripState {
-    trip: [],
+  trip: [],
 }
 
 const slice = createSlice({
-    name: 'trip',
-    initialState: {
-        trip: [],
-    } as tripState,
-    reducers: {},
+  name: 'trip',
+  initialState: {
+    trip: [],
+  } as tripState,
+  reducers: {},
 });
 
 export const { } = slice.actions;
