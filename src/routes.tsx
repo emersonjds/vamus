@@ -1,21 +1,15 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "./screens/HomeScreen";
-import Trips from "./screens/Trips";
-import { FontAwesome, Ionicons } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
-
-
-
-import { AntDesign } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Profile from "./screens/Profile";
-import MyTravel from "./screens/MyTravel";
+
+import { Entypo, FontAwesome, AntDesign } from '@expo/vector-icons';
+
+import HomeScreen from "./screens/HomeScreen";
 import DetailsTrip from "./screens/DetailsTrip";
 import Notification from "./screens/Notification";
 import Proposal from "./screens/Proposal";
-import { RootStackParamList } from "./types/route";
+import Trips from "./screens/Trips";
 
 
 const Tab = createBottomTabNavigator();
@@ -66,7 +60,7 @@ const MyTabs = () => {
 }
 
 // @ts-ignore
-const Routes: RootStackParamList = () => {
+const Routes = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
