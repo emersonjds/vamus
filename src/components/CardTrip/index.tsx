@@ -28,10 +28,9 @@ const CardTrip: FC<CardTripProps> = ({
   return (
     <>
       <Box
-        style={{
-          flex: 1,
-          marginLeft: 15,
-        }}>
+        flex={1}
+        mr={15}
+      >
         <Card
           style={{
             height: 280,
