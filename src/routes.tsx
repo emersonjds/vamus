@@ -1,10 +1,13 @@
+//native
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+//libs
 import { Entypo, FontAwesome, AntDesign } from '@expo/vector-icons';
 
+// internal
 import HomeScreen from "./screens/HomeScreen";
 import DetailsTrip from "./screens/DetailsTrip";
 import Notification from "./screens/Notification";
