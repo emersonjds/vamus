@@ -104,10 +104,8 @@ const HomeScreen: FC = () => {
         </Box>
 
         <Box
-          style={{
-            width: '100%',
-            alignItems: 'center'
-          }}
+          width={'100%'}
+          alignItems={'center'}
         >
           <TouchableOpacity
             onPress={() => {
