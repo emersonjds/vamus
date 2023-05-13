@@ -1,19 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+interface Travel {
+  id: number,
+  title: string,
+  uri: string,
+  views: number,
+  pp: string,
+  onPress: () => void,
+  country: string,
+  icon: string
+}
+
 interface tripState {
   trips: [],
-  travels: [
-    {
-      id: number,
-      title: string,
-      uri: string,
-      views: number,
-      pp: string,
-      onPress: () => void,
-      country: string,
-      icon: string
-    }
-  ]
+  travels: Travel[],
 }
 
 export const slice = createSlice({
@@ -23,6 +23,16 @@ export const slice = createSlice({
     travels: [
       {
         id: 1,
+        title: 'Role de Rodas - Recife - PE',
+        uri: 'https://i2.wp.com/blog.123milhas.com/wp-content/uploads/2019/10/2-Recife-1.jpeg?fit=1024%2C682&ssl=1',
+        views: 90,
+        pp: 'R$ 1.500,00',
+        onPress: () => { },
+        country: 'Brasil',
+        icon: ''
+      },
+      {
+        id: 2,
         title: 'Role de Rodas - Recife - PE',
         uri: 'https://i2.wp.com/blog.123milhas.com/wp-content/uploads/2019/10/2-Recife-1.jpeg?fit=1024%2C682&ssl=1',
         views: 90,
