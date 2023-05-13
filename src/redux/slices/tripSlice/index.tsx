@@ -1,18 +1,28 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 interface tripState {
-  trip: [],
+  trips: [],
 }
 
-const slice = createSlice({
+export const slice = createSlice({
   name: 'trip',
   initialState: {
-    trip: [],
+    trips: [],
   } as tripState,
-  reducers: {},
+  reducers: {
+    //@ts-ignore
+    addNewTrip: (state, { payload }) => {
+      return {
+        ...state,
+        trip: [...state.trips, payload],
+      }
+    }
+  }
 });
 
-export const { } = slice.actions;
+export const {
+  addNewTrip,
+} = slice.actions;
 
 export const tripSelector = (state: { trip: any }) => state.trip;
 

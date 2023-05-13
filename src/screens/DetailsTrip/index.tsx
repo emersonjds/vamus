@@ -5,7 +5,6 @@ import { Box, Container } from '../../components/Spacing';
 import { Image } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
-
 const DetailsTrip: FC = () => {
   const route = useRoute();
   const { id, title, uri, views, pp, icon } = route.params;
