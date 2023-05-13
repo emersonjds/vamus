@@ -1,3 +1,4 @@
+import { FontAwesome } from '@expo/vector-icons';
 import { createSlice } from '@reduxjs/toolkit';
 
 interface Travel {
@@ -8,7 +9,7 @@ interface Travel {
   pp: string,
   onPress: () => void,
   country: string,
-  icon: string
+  icon: string | JSX.Element,
 }
 
 interface tripState {
@@ -29,7 +30,7 @@ export const slice = createSlice({
         pp: 'R$ 1.500,00',
         onPress: () => { },
         country: 'Brasil',
-        icon: ''
+        icon: <FontAwesome name="heart" size={24} color="black" />
       },
       {
         id: 2,
@@ -48,7 +49,7 @@ export const slice = createSlice({
     addNewTrip: (state, { payload }) => {
       return {
         ...state,
-        trip: [...state.travels, payload],
+        travels: [...state.travels, payload],
       }
     }
   }

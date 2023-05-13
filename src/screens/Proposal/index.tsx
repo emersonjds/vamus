@@ -6,6 +6,11 @@ import { Switch } from 'react-native-paper';
 import { List } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { marginBottom } from 'styled-system';
+import { useDispatch } from 'react-redux';
+import { addNewTrip } from '../../redux/slices/tripSlice';
+import { AntDesign } from '@expo/vector-icons';
+import uuid from 'react-native-uuid';
+
 
 
 const Proposal: React.FC = () => {
@@ -26,6 +31,20 @@ const Proposal: React.FC = () => {
   const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
   const onToggleSwitch2 = () => setIsSwitchOn2(!isSwitchOn2);
   const handlePress = () => setExpanded(!expanded);
+
+  const dispatch = useDispatch();
+
+  let destiny = {
+    id: uuid.v4(),
+    title: 'Role de Rodas - Holanda',
+    uri: 'https://www.eurodicas.com.br/wp-content/uploads/2019/10/melhores-cidades-para-morar-na-holanda.jpg',
+    views: 300,
+    pp: 'R$ 1.650,00',
+    onPress: () => { },
+    country: 'Holanda',
+    icon: <AntDesign name="flag" size={24} color="black" />,
+  }
+
 
 
 
@@ -148,8 +167,6 @@ const Proposal: React.FC = () => {
                   marginTop: 10
                 }}
                 label="Escolha entre 1 e 5 estrelas"
-                // onChange={setStars}
-                // value={stars}
                 value={stars.toString()}
               />
             </Box>
@@ -249,25 +266,25 @@ const Proposal: React.FC = () => {
             }}
 
             onPress={() => {
-              Alert.alert(
-                "PACOTE CRIADO COM SUCESSO",
-                "OBBBAAAAA, VAMOS ENCONTRAR OUTROS VIAJANTES PARA COMPARTILHAR ESSA EXPERIENCIA COM VOCE",
-                [
-                  {
-                    text: "OK",
-                    onPress: () => navigate.navigate('HomeScreen')
-                  }
-                ]
-              )
-            }
-            }
+              dispatch(addNewTrip(destiny))
+
+              setTimeout(() => {
+                Alert.alert(
+                  "PACOTE CRIADO COM SUCESSO",
+                  "OBBBAAAAA, VAMOS ENCONTRAR OUTROS VIAJANTES PARA COMPARTILHAR ESSA EXPERIENCIA COM VOCE",
+                  [
+                    {
+                      text: "OK",
+                      onPress: () => navigate.navigate('HomeScreen')
+                    }
+                  ]
+                )
+              }, 2000)
+            }}
           >
             Criar Pacote
           </Button>
         </ScrollView>
-
-
-
       </Container>
     </>
   );
