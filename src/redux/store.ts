@@ -9,7 +9,9 @@ const customizedMiddleware = getDefaultMiddleware({
 })
 
 export const store = configureStore({
-    reducer: { trip: tripReducer },
+    reducer: {
+        trip: tripReducer
+    },
     middleware: getDefaultMiddleware => getDefaultMiddleware({
         serializableCheck: false
     })
